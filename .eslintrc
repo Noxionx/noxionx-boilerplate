@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "space-before-function-paren": [2, "always"],
+    "new-cap": [2, {
+      "newIsCap": true,
+      "capIsNewExceptions": ["DropTarget", "DropSource", "DragDropContext"]
+    }],
+    "no-console": 0,
+    "spaced-comment": ["error", "always", {
+      "block": { "exceptions": ["*"] }
+    }]
+  },
+  "globals": {
+    "document": true
+  }
+}  

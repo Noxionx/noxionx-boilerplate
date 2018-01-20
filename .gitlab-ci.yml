@@ -1,0 +1,33 @@
+stages:
+  - build
+  # - deploy
+
+cache:
+  paths:
+    - ./backend/dist
+    - ./frontend/public/assets
+    
+build:
+  stage: build
+  script:
+    - npm i
+    - cd ./backend
+    - npm i
+    - npm run build
+    - cd ../frontend
+    - npm i
+    - npm run build
+
+#deploy:
+#  stage: deploy
+#  only:
+#    - master
+#  script:
+#    - npm i --production
+#    - cd ./backend
+#    - npm i --production
+#    - cd ../frontend
+#    - npm i --production
+#    - cd ..
+#    - sudo rsync -a --del ./ /opt/noxionx-boilerplate
+#    - pm2 restart noxionx-boilerplate

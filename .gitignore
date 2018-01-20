@@ -1,0 +1,16 @@
+################
+# Dependencies #
+################
+node_modules
+
+##########
+# Builds #
+##########
+frontend/public/assets
+backend/dist
+
+
+###################
+# VSCode - eslint #
+###################
+tasks.json

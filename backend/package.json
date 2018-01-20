@@ -1,0 +1,25 @@
+{
+  "name": "noxionx-boilerplate-backend",
+  "version": "1.0.0",
+  "author": "Noxionx <nox35400@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --ignore './dist' -e js,coffee,litcoffee,json,html,scss --exec 'yarn run build && yarn run start'",
+    "win-dev": "SET \"NODE_ENV=development\"  nodemon --ignore './dist ' --exec ' yarn run build && yarn run start '",
+    "build": "webpack --config webpack.config.babel.js --progress --profile --colors",
+    "start": "node dist/App.js",
+    "lint": "eslint app"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "file-loader": "^1.1.6",
+    "nodemon": "^1.14.11",
+    "webpack": "^3.10.0"
+  }
+}
